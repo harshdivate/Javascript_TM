@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <ul class="items">
+            <li>APple</li>
+        </ul>
+    </div>
+
+
+    <script>
+        function createNewItem(item){
+            const items=document.querySelector('.items');
+            const lis=createNewList();
+            const text=createTextNode(item);
+
+            const button=createNewButton();
+            const icon=createNewIcon();
+            button.appendChild(icon);
+
+            lis.appendChild(text);
+            lis.appendChild(button);
+            items.appendChild(lis);
+
+        }
+        function createNewList(){
+            const li=document.createElement('li');
+            return li;
+        }
+        function createTextNode(items)
+        {
+            const text=document.createTextNode(items);
+            return text;
+        }
+
+        function createNewButton(){
+            const button=document.createElement('button');
+            button.className='remove-item btn-link text-red';
+            return button;
+        }
+
+        function createNewIcon(){
+            const i=document.createElement('i');
+            i.className='fa-solid fa-xmark';
+            return i;
+        }
+
+
+        createNewItem('Apple');
+    </script>
+</body>
+</html>

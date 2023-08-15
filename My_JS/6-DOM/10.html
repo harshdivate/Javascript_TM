@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="myp">
+                <!--  -->
+        <p clas="gg"></p>
+        <strong>Hello from Strong</strong>
+    </div>
+    <script>
+        const para=document.querySelector('.myp');
+        const h1=document.createElement('h1');
+        h1.textContent='Hello From H1';
+        h1.className='h1';
+
+        para.insertAdjacentElement('beforeend',h1);
+
+        text="Hello from text";
+        para.insertAdjacentText('afterend',text) 
+
+        html='<h2>Hello from h2</h2>';
+        para.insertAdjacentHTML('afterend',html)
+
+        const div=document.createElement('div');
+        div.appendChild(document.createTextNode('Hello From Div'));
+        gg=document.querySelector('.gg')
+        para.insertBefore(div,gg)
+    </script>
+</body>
+</html>

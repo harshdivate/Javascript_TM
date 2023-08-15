@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="items">
+
+    </ul>
+
+    <script>
+        // Dirty method
+        function createItemList(item){
+        const li=document.createElement('li');
+
+        li.innerHTML=` ${item}
+  <button class="remove-item btn-link text-red">
+    <i class="fa-solid fa-xmark"></i>
+  </button>`;
+
+  document.querySelector('.items').appendChild(li);
+    console.log(document.querySelector('.items'));
+
+    }
+    function createNewItem(item){
+        const li=document.createElement('li');
+        li.appendChild(document.createTextNode(item))
+
+        button=document.createElement('button')
+        button.className='remove-item btn-link text-red';
+        i=document.createElement('i');
+        i.className='fa-solid fa-xmark';
+        button.appendChild(i);
+        
+        li.appendChild(button);
+        console.log(li);
+    }
+    createItemList('Apple')
+    createNewItem('Chesse')
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="priority-input">
+        <option>0-Zero</option>
+        <option>1-One</option>
+        <option>2-Two</option>
+    </select>
+    <div id="idd">
+
+    </div>
+    <input type="text" id="inp">
+    <script>
+        // const selected_value=document.getElementById('priority-input');
+        const inp=document.getElementById('inp');
+
+        function blur(){
+            // inp.style.border='None';
+            inp.style.width='10px';
+            inp.style.height='10px';
+
+
+        }
+        function myfunc(e){
+            inp.style.height='30px';
+            inp.style.width='100px';
+            inp.style.border='1px solid rgba(0,0,0,0.6)';
+            inp.style.borderRadius='20px';
+        }
+        inp.addEventListener('focus',myfunc)
+        inp.addEventListener('blur',blur)
+    </script>
+</body>
+</html>

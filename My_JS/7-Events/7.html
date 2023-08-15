@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="formm">
+        <label>Item</label>
+        <input id="item" type="text" name="item"><br>
+        <select id="idd">
+            <option value="0">Select Priority</option>
+            <option value="1">1</option>
+
+            <option value="2">2</option>
+
+            <option value="3">3</option>
+
+        </select>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        myform=document.getElementById('formm');
+        const form=new FormData(myform);
+
+
+        function onSubmit(e){
+            e.preventDefault();
+            const items=form.get('item');
+            console.log(items);
+        }
+        myform.addEventListener('submit',onSubmit);
+        
+    </script>
+</body>
+</html>

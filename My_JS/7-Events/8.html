@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form-item">
+    <input type="text" name="item" id="item-item">
+    <br>
+    <select id="priority" name="priority">
+        <option value="0">Select Priority</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+    </select>
+    <button type="submit" id="btn">Submit</button>
+</form>
+
+<ul id="ul">
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+
+</ul>
+
+
+    <script>
+    //    const form=document.getElementById('form-item');
+
+    //    const btn=document.getElementById('btn');
+
+
+    //    function onsubmit(e){
+        
+    //     const item=document.getElementById('item-item').value;
+    //     const priority=document.getElementById('priority').value;
+    //     document.body.innerHTML+=`Item is ${item} and Priority is ${priority}`;
+    //     console.log(item,priority);
+    //     e.preventDefault();
+    //    }
+
+
+    //    function onsubmit2(e){
+    //     e.preventDefault();
+    //     const formdata=new FormData(form);
+    //     const item=formdata.get('item');
+    //     const priority=formdata.get('priority');
+    //     console.log(item,priority);
+    //     const entries=formdata.entries;
+    //    }
+
+    //    form.addEventListener('submit',onsubmit2);
+
+        const list=document.getElementById('ul');
+
+        list.addEventListener('click',click);
+        function click(e){
+            console.log(e.target)
+            e.target.remove();
+        }
+    </script>
+</body>
+</html>

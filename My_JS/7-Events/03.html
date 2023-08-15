@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="btn">Hello</button>
+    <img src="hero4.png" style="width:50px;height:50px;">
+    <h1>Hello</h1>
+    
+
+
+    <script>
+        let img=document.querySelector('img');
+        img.addEventListener('drag',myfunc)
+        let btn=document.querySelector('.btn');
+        btn.addEventListener('',myfunc);
+
+        function myfunc(e){
+            document.querySelector('h1').textContent=`X ${e.clientX} Y ${e.clientY}`
+            // console.log(e.target)
+            // console.log(e.currentTarget)
+            console.log(e.clientX)
+            console.log(e.clientY)
+
+        }
+
+
+        
+    </script>
+</body>
+</html>

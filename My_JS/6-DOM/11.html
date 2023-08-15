@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="h1">hag</h1>
+    <h2 class="h2">adfa</h2>
+    <h3 class="h3">dfaf</h3>
+
+    <script>
+        function insertAfter(newEl,item){
+            item.parentElement.insertBefore(newEl,item.nextSibling);
+
+        }
+
+        var div=document.createElement('div');
+        var h1=document.createElement('h1');
+        h1.textContent="Hello from after H1";
+        div.appendChild(h1);
+        var h2=document.querySelector('.h2');
+        console.log(div);
+        insertAfter(div,h2)
+    </script>
+</body>
+</html>
